@@ -1,9 +1,0 @@
-{
-  "title": "Lazarus Group Deploys New Malware in Supply Chain Attack",
-  "source": "Kaspersky",
-  "description": "Security researchers have identified a sophisticated supply chain attack by the Lazarus Group targeting software companies in Asia and Europe. The attack involves compromised software updates that deliver custom malware capable of stealing credentials and financial data.",
-  "url": "https://www.kaspersky.com/blog/lazarus-supply-chain",
-  "cve": "",
-  "categories": ["APT", "Malware", "Supply Chain", "Lazarus Group"],
-  "date": "2024-01-20"
-}

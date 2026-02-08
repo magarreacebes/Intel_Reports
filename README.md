@@ -59,7 +59,7 @@ Crea un nuevo archivo en la carpeta `reports/` con el siguiente formato **(solo 
   "url": "https://link-to-full-report.com",
   "cve": "CVE-2024-12345",
   "categories": ["Malware", "APT", "Ransomware"],
-  "date": "2024-01-15"
+  "date": "15-01-2024"
 }
 ```
 
@@ -70,7 +70,7 @@ Crea un nuevo archivo en la carpeta `reports/` con el siguiente formato **(solo 
 - `url` (optional): Link to the full report
 - `cve` (optional): Associated CVE if applicable
 - `categories` (required): Array of categories/tags in English
-- `date` (required): Date in YYYY-MM-DD format
+- `date` (required): Date in **dd-mm-yyyy** format (Spanish date format)
 
 **Categorías sugeridas (en inglés):**
 - APT

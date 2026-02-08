@@ -1,12 +1,7 @@
 {
   "reports": [
-    "applescript-abuse-macos.json",
-    "exchange-zero-day.json",
-    "healthcare-ransomware.json",
-    "lazarus-supply-chain.json",
-    "nginx-traffic-hijacking.json",
-    "shadow-campaigns-2024.json"
+    "Black_Bast_Defense_Evasion_Capability_Embedded_in_Ransomware_Payload.json"
   ],
-  "lastUpdated": "2026-02-08T18:55:35.748Z",
-  "totalReports": 6
+  "lastUpdated": "2026-02-08T19:05:58.920Z",
+  "totalReports": 1
 }

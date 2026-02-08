@@ -1,9 +1,0 @@
-{
-  "title": "Ransomware Gang Targets Healthcare Sector with Double Extortion",
-  "source": "Sophos",
-  "description": "A new ransomware campaign is targeting healthcare organizations worldwide using double extortion tactics. The attackers encrypt critical systems and threaten to leak sensitive patient data unless ransoms are paid. The campaign has affected over 50 hospitals in the past month.",
-  "url": "https://news.sophos.com/healthcare-ransomware-2024",
-  "cve": "",
-  "categories": ["Ransomware", "Healthcare", "Data Breach", "Double Extortion"],
-  "date": "2024-01-18"
-}

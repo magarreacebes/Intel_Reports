@@ -105,8 +105,8 @@ if (fs.existsSync('./reports')) {
       }
       
       // Check date format
-      if (content.date && !/^\d{4}-\d{2}-\d{2}$/.test(content.date)) {
-        console.log(`   ⚠️  ${file}: Date format should be YYYY-MM-DD`);
+      if (content.date && !/^\d{2}-\d{2}-\d{4}$/.test(content.date)) {
+        console.log(`   ⚠️  ${file}: Date format should be dd-mm-yyyy`);
         warnings++;
       }
       

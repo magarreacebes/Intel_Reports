@@ -1,9 +1,0 @@
-{
-  "title": "Critical Zero-Day in Microsoft Exchange Server Actively Exploited",
-  "source": "Microsoft",
-  "description": "Microsoft has disclosed a critical zero-day vulnerability in Exchange Server that is being actively exploited in the wild. The vulnerability allows remote code execution and has been used in targeted attacks against government and enterprise organizations.",
-  "url": "https://msrc.microsoft.com/update-guide",
-  "cve": "CVE-2024-21410",
-  "categories": ["Vulnerability", "Zero-Day", "Microsoft Exchange", "Critical Infrastructure"],
-  "date": "2024-01-25"
-}

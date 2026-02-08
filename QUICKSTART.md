@@ -17,7 +17,7 @@ Abre `index.html` con tu navegador. ¡Eso es todo! No necesitas servidor local.
   "url": "https://example.com",
   "cve": "",
   "categories": ["Test", "Demo"],
-  "date": "2024-01-20"
+  "date": "20-01-2024"
 }
 ```
 

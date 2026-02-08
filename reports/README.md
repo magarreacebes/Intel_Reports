@@ -30,7 +30,7 @@ All reports MUST be in English. The web application will translate the UI elemen
   "url": "https://link-to-full-report.com",
   "cve": "CVE-2024-12345",
   "categories": ["Category1", "Category2"],
-  "date": "2024-01-15"
+  "date": "15-01-2024"
 }
 ```
 
@@ -44,7 +44,7 @@ All reports MUST be in English. The web application will translate the UI elemen
 | `url` | ❌ | string | Link to the full report (optional) |
 | `cve` | ❌ | string | Associated CVE identifier (optional) |
 | `categories` | ✅ | array | List of relevant categories/tags |
-| `date` | ✅ | string | Publication or update date (YYYY-MM-DD format) |
+| `date` | ✅ | string | Publication or update date (**dd-mm-yyyy** format, Spanish) |
 
 ### Suggested Categories
 

@@ -1,0 +1,9 @@
+{
+  "title": "Black Basta: Defense Evasion Capability Embedded in Ransomware Payload",
+  "source": "security",
+  "description": "A recent Black Basta attack campaign was notable because the ransomware contained a bring-your-own-vulnerable-driver (BYOVD) defense evasion component embedded within the ransomware payload itself. Normally the BYOVD defense evasion component of an attack would involve a distinct tool that would be deployed on the system prior to the ransomware payload in order to disable security software. However, in this attack, the vulnerable driver (an NsecSoft NSecKrnl driver) was bundled with the ransomware itself.",
+  "url": "https://www.security.com/threat-intelligence/black-basta-ransomware-byovd",
+  "cve": "CVE-2025-68947",
+  "categories": ["Black Basta", "Ransomware", "Defense Evasion", "BYOVD"],
+  "date": "05-02-2026"
+}

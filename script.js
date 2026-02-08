@@ -150,7 +150,7 @@ async function loadReportsFromJSON() {
                 url: report.url || '',
                 cve: report.cve || '',
                 categories: report.categories || [],
-                date: report.date ? new Date(report.date) : new Date()
+                date: report.date ? parseSpanishDate(report.date) : new Date()
             }));
         
         filteredReports = [...reports];
@@ -179,9 +179,30 @@ function showError(message) {
 // UTILIDADES
 // ============================
 
+// Parsear fecha en formato español dd-mm-yyyy
+function parseSpanishDate(dateString) {
+    if (!dateString) return new Date();
+    
+    // Si ya es un objeto Date, devolverlo
+    if (dateString instanceof Date) return dateString;
+    
+    // Parsear formato dd-mm-yyyy
+    const parts = dateString.split('-');
+    if (parts.length === 3) {
+        const day = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1; // Los meses en JS son 0-indexed
+        const year = parseInt(parts[2], 10);
+        return new Date(year, month, day);
+    }
+    
+    // Fallback a parseado estándar
+    return new Date(dateString);
+}
+
 function formatDate(date) {
     const now = new Date();
-    const diffTime = Math.abs(now - new Date(date));
+    const dateObj = parseSpanishDate(date);
+    const diffTime = Math.abs(now - dateObj);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     
     if (diffDays === 0) return t('today');
@@ -314,7 +335,7 @@ function applyFilters() {
         let matchesTime = true;
         if (timeFilter !== 'all') {
             const days = parseInt(timeFilter);
-            const reportDate = new Date(report.date);
+            const reportDate = parseSpanishDate(report.date);
             const now = new Date();
             const diffDays = Math.ceil((now - reportDate) / (1000 * 60 * 60 * 24));
             matchesTime = diffDays <= days;
@@ -324,7 +345,7 @@ function applyFilters() {
     });
     
     // Ordenar por fecha
-    filteredReports.sort((a, b) => new Date(b.date) - new Date(a.date));
+    filteredReports.sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
     
     renderReports();
 }

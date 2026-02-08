@@ -1,9 +1,0 @@
-{
-  "title": "The Shadow Campaigns: Uncovering Global Espionage",
-  "source": "Unit 42",
-  "description": "Unit 42 uncovers a new Asia-based, state-aligned cyberespionage group, TGR-STA-1030, conducting widespread campaigns against government and critical infrastructure entities across 37 countries.",
-  "url": "https://unit42.paloaltonetworks.com/shadow-campaigns",
-  "cve": "CVE-2019-11580",
-  "categories": ["APT", "Espionage", "Critical Infrastructure"],
-  "date": "2024-01-15"
-}
