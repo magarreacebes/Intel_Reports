@@ -222,12 +222,21 @@ function getTagClass(tag) {
     return 'tag-default';
 }
 
+// Resaltar términos de búsqueda en el texto
+function highlightText(text, searchTerm) {
+    if (!searchTerm || searchTerm.trim() === '') return text;
+    
+    const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+}
+
 // ============================
 // RENDERIZADO
 // ============================
 function renderReports() {
     const container = document.getElementById('reportsList');
     const count = document.getElementById('reportCount');
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
     
     count.textContent = filteredReports.length;
     
@@ -242,7 +251,12 @@ function renderReports() {
         return;
     }
     
-    container.innerHTML = filteredReports.map(report => `
+    container.innerHTML = filteredReports.map(report => {
+        const title = highlightText(report.title, searchTerm);
+        const description = highlightText(report.description, searchTerm);
+        const cve = report.cve ? highlightText(report.cve, searchTerm) : '';
+        
+        return `
         <div class="report-card" data-id="${report.id}">
             <div class="report-header">
                 <div class="report-source">
@@ -251,24 +265,28 @@ function renderReports() {
                 <div class="report-content">
                     <h3 class="report-title">
                         <i class="fas fa-shield-alt"></i>
-                        ${report.title}
+                        ${title}
                     </h3>
                     <div class="report-meta">
                         <span><i class="fas fa-building"></i> ${t('sourceLabel')} ${report.source}</span>
                         <span><i class="fas fa-clock"></i> ${formatDate(report.date)}</span>
-                        ${report.cve ? `<span class="cve-badge">${report.cve}</span>` : ''}
+                        ${report.cve ? `<span class="cve-badge">${cve}</span>` : ''}
                     </div>
-                    <p class="report-description">${report.description}</p>
+                    <p class="report-description">${description}</p>
                     ${report.url ? `<a href="${report.url}" target="_blank" style="color: var(--primary-color); font-size: 14px;"><i class="fas fa-external-link-alt"></i> ${t('viewFullReport')}</a>` : ''}
                     ${report.categories.length > 0 ? `
                         <div class="report-tags">
-                            ${report.categories.map(tag => `<span class="tag ${getTagClass(tag)}">${tag}</span>`).join('')}
+                            ${report.categories.map(tag => {
+                                const highlightedTag = highlightText(tag, searchTerm);
+                                return `<span class="tag ${getTagClass(tag)}">${highlightedTag}</span>`;
+                            }).join('')}
                         </div>
                     ` : ''}
                 </div>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 // Renderizar filtros
@@ -317,11 +335,12 @@ function applyFilters() {
     const timeFilter = document.querySelector('.time-btn.active').dataset.filter;
     
     filteredReports = reports.filter(report => {
-        // Búsqueda
+        // Búsqueda mejorada: título, descripción, fuente, CVE y categorías
         const matchesSearch = !searchTerm || 
             report.title.toLowerCase().includes(searchTerm) ||
             report.description.toLowerCase().includes(searchTerm) ||
             report.source.toLowerCase().includes(searchTerm) ||
+            (report.cve && report.cve.toLowerCase().includes(searchTerm)) ||
             report.categories.some(cat => cat.toLowerCase().includes(searchTerm));
         
         // Fuente

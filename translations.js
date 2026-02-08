@@ -3,7 +3,7 @@ const translations = {
     es: {
         // Sidebar
         filters: 'Filtros',
-        searchPlaceholder: 'Buscar informes...',
+        searchPlaceholder: 'Buscar por título, CVE, tags...',
         lastUpdate: 'Última Actualización',
         all: 'Todo',
         last3days: 'Últimos 3 días',
@@ -41,7 +41,7 @@ const translations = {
     en: {
         // Sidebar
         filters: 'Filters',
-        searchPlaceholder: 'Search reports...',
+        searchPlaceholder: 'Search by title, CVE, tags...',
         lastUpdate: 'Last Update',
         all: 'All',
         last3days: 'Last 3 days',
@@ -79,7 +79,7 @@ const translations = {
     fr: {
         // Sidebar
         filters: 'Filtres',
-        searchPlaceholder: 'Rechercher des rapports...',
+        searchPlaceholder: 'Rechercher par titre, CVE, tags...',
         lastUpdate: 'Dernière mise à jour',
         all: 'Tous',
         last3days: '3 derniers jours',

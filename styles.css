@@ -46,6 +46,19 @@ body {
     line-height: 1.6;
 }
 
+/* Resaltado de búsqueda */
+mark {
+    background-color: rgba(255, 213, 0, 0.4);
+    color: inherit;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] mark {
+    background-color: rgba(255, 213, 0, 0.3);
+}
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -225,12 +238,23 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 14px;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
+    background-color: var(--background);
 }
 
 .search-box input:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(91, 159, 245, 0.1);
+}
+
+.search-box input:not(:placeholder-shown) {
+    background-color: rgba(91, 159, 245, 0.05);
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .search-box input:not(:placeholder-shown) {
+    background-color: rgba(91, 159, 245, 0.08);
 }
 
 .filter-section {
