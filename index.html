@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informes de Ciberseguridad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar con filtros -->
+        <aside class="sidebar">
+            <div class="filters-header">
+                <h3><i class="fas fa-filter"></i> Filtros</h3>
+                <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar informes...">
+            </div>
+
+            <!-- Filtro por fecha -->
+            <div class="filter-section">
+                <h4>Última Actualización</h4>
+                <div class="time-filters">
+                    <button class="time-btn active" data-filter="all">Todo</button>
+                    <button class="time-btn" data-filter="3">Últimos 3 días</button>
+                    <button class="time-btn" data-filter="7">Última semana</button>
+                    <button class="time-btn" data-filter="30">Último mes</button>
+                </div>
+            </div>
+
+            <!-- Filtro por fuente -->
+            <div class="filter-section">
+                <h4>Fuente</h4>
+                <div class="checkbox-filters" id="sourceFilters">
+                    <!-- Se llenarán dinámicamente -->
+                </div>
+                <button class="show-more" id="showMoreSources">Mostrar más</button>
+            </div>
+
+            <!-- Filtro por categoría -->
+            <div class="filter-section">
+                <h4>Categorías</h4>
+                <div class="checkbox-filters" id="categoryFilters">
+                    <!-- Se llenarán dinámicamente -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="header">
+                <h1><span id="reportCount">0</span> Informes</h1>
+            </div>
+
+            <!-- Lista de informes -->
+            <div class="reports-list" id="reportsList">
+                <!-- Los informes se cargarán dinámicamente -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "reports": [
+    "exchange-zero-day.json",
+    "lazarus-supply-chain.json",
+    "healthcare-ransomware.json",
+    "shadow-campaigns-2024.json",
+    "applescript-abuse-macos.json",
+    "nginx-traffic-hijacking.json"
+  ]
+}
