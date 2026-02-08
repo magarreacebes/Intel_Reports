@@ -1,9 +1,9 @@
 {
-  "titulo": "Web Traffic Hijacking: When Your Nginx Configuration Turns Malicious",
-  "fuente": "Datadog",
-  "descripcion": "An active campaign targets NGINX servers, injecting malicious configurations to hijack web traffic and redirect it through attacker-controlled infrastructure.",
+  "title": "Web Traffic Hijacking: When Your Nginx Configuration Turns Malicious",
+  "source": "Datadog",
+  "description": "An active campaign targets NGINX servers, injecting malicious configurations to hijack web traffic and redirect it through attacker-controlled infrastructure.",
   "url": "https://www.datadoghq.com/blog/nginx-hijacking",
   "cve": "",
-  "categorias": ["Web Security", "NGINX", "Hijacking"],
-  "fecha": "2024-01-05"
+  "categories": ["Web Security", "NGINX", "Hijacking"],
+  "date": "2024-01-05"
 }

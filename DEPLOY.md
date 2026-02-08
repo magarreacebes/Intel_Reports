@@ -103,6 +103,8 @@ Los cambios se reflejarán en tu web en 1-2 minutos.
 - ✅ Los nombres de archivo no deben tener espacios ni caracteres especiales
 - ✅ La fecha debe estar en formato `YYYY-MM-DD`
 - ✅ Las URLs deben incluir `http://` o `https://`
+- ✅ **Contenido en inglés**: Todos los informes JSON deben estar en inglés únicamente
+- ✅ **Traducciones en translations.js**: Solo la interfaz se traduce, no el contenido
 
 ## 🎨 Personalización Adicional
 

@@ -1,9 +1,9 @@
 {
-  "titulo": "AppleScript Abuse: Unpacking a macOS Phishing Campaign",
-  "fuente": "Darktrace",
-  "descripcion": "A technical analysis detailing the process of unpacking the multi-stage SnappyBee (Deed RAT) malware, attributed to the Salt Typhoon threat group, which uses DLL side-loading and in-memory execution techniques.",
+  "title": "AppleScript Abuse: Unpacking a macOS Phishing Campaign",
+  "source": "Darktrace",
+  "description": "A technical analysis detailing the process of unpacking the multi-stage SnappyBee (Deed RAT) malware, attributed to the Salt Typhoon threat group, which uses DLL side-loading and in-memory execution techniques.",
   "url": "https://darktrace.com/blog/applescript-phishing-campaign",
   "cve": "",
-  "categorias": ["Phishing", "macOS", "Malware"],
-  "fecha": "2024-01-10"
+  "categories": ["Phishing", "macOS", "Malware"],
+  "date": "2024-01-10"
 }

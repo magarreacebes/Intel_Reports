@@ -1,0 +1,12 @@
+{
+  "name": "cybersecurity-reports",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de informes de ciberseguridad",
+  "scripts": {
+    "generate-index": "node generate-index.js",
+    "test": "node test-automation.js"
+  },
+  "keywords": ["cybersecurity", "reports", "threat-intelligence"],
+  "author": "",
+  "license": "MIT"
+}

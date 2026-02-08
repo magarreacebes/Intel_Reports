@@ -12,41 +12,62 @@
         <!-- Sidebar con filtros -->
         <aside class="sidebar">
             <div class="filters-header">
-                <h3><i class="fas fa-filter"></i> Filtros</h3>
-                <button class="theme-toggle" id="themeToggle" title="Cambiar tema">
-                    <i class="fas fa-moon"></i>
-                </button>
+                <h3><i class="fas fa-filter"></i> <span data-i18n="filters">Filtros</span></h3>
+                <div class="header-actions">
+                    <div class="language-selector">
+                        <button class="lang-toggle" id="langToggle" data-i18n-title="changeLanguage">
+                            <span class="lang-flag">🇪🇸</span>
+                        </button>
+                        <div class="language-menu" id="languageMenu">
+                            <div class="language-option" data-lang="es">
+                                <span class="lang-flag-option">🇪🇸</span>
+                                <span>Español</span>
+                            </div>
+                            <div class="language-option" data-lang="en">
+                                <span class="lang-flag-option">🇬🇧</span>
+                                <span>English</span>
+                            </div>
+                            <div class="language-option" data-lang="fr">
+                                <span class="lang-flag-option">🇫🇷</span>
+                                <span>Français</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" data-i18n-title="changeTheme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- Barra de búsqueda -->
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Buscar informes...">
+                <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Buscar informes...">
             </div>
 
             <!-- Filtro por fecha -->
             <div class="filter-section">
-                <h4>Última Actualización</h4>
+                <h4 data-i18n="lastUpdate">Última Actualización</h4>
                 <div class="time-filters">
-                    <button class="time-btn active" data-filter="all">Todo</button>
-                    <button class="time-btn" data-filter="3">Últimos 3 días</button>
-                    <button class="time-btn" data-filter="7">Última semana</button>
-                    <button class="time-btn" data-filter="30">Último mes</button>
+                    <button class="time-btn active" data-filter="all" data-i18n="all">Todo</button>
+                    <button class="time-btn" data-filter="3" data-i18n="last3days">Últimos 3 días</button>
+                    <button class="time-btn" data-filter="7" data-i18n="lastWeek">Última semana</button>
+                    <button class="time-btn" data-filter="30" data-i18n="lastMonth">Último mes</button>
                 </div>
             </div>
 
             <!-- Filtro por fuente -->
             <div class="filter-section">
-                <h4>Fuente</h4>
+                <h4 data-i18n="source">Fuente</h4>
                 <div class="checkbox-filters" id="sourceFilters">
                     <!-- Se llenarán dinámicamente -->
                 </div>
-                <button class="show-more" id="showMoreSources">Mostrar más</button>
+                <button class="show-more" id="showMoreSources" data-i18n="showMore">Mostrar más</button>
             </div>
 
             <!-- Filtro por categoría -->
             <div class="filter-section">
-                <h4>Categorías</h4>
+                <h4 data-i18n="categories">Categorías</h4>
                 <div class="checkbox-filters" id="categoryFilters">
                     <!-- Se llenarán dinámicamente -->
                 </div>
@@ -56,7 +77,7 @@
         <!-- Contenido principal -->
         <main class="main-content">
             <div class="header">
-                <h1><span id="reportCount">0</span> Informes</h1>
+                <h1><span id="reportCount">0</span> <span data-i18n="reports">Informes</span></h1>
             </div>
 
             <!-- Lista de informes -->
@@ -66,6 +87,7 @@
         </main>
     </div>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
